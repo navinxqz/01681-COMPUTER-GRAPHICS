@@ -25,6 +25,7 @@ bin/*
 # Ignore platform-specific configuration files (adapt as needed)
 
 *.vcxproj
+*.vsidx
 
 *.sln
 
