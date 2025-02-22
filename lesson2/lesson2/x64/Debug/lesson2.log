@@ -1,0 +1,9 @@
+﻿  Source.cpp
+Source.obj : error LNK2019: unresolved external symbol glutInit referenced in function main
+Source.obj : error LNK2019: unresolved external symbol glutInitDisplayMode referenced in function main
+Source.obj : error LNK2019: unresolved external symbol glutMainLoop referenced in function main
+Source.obj : error LNK2019: unresolved external symbol glutCreateWindow referenced in function main
+Source.obj : error LNK2019: unresolved external symbol glutDisplayFunc referenced in function main
+Source.obj : error LNK2019: unresolved external symbol glutReshapeFunc referenced in function main
+D:\Basic Softwares\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\lib\x64\glut32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+D:\Versity space\GLUT\lesson2\x64\Debug\lesson2.exe : fatal error LNK1120: 6 unresolved externals
