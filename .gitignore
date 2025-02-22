@@ -1,32 +1,21 @@
 # Ignore compiled executables
 
 *.exe
-
 build/* 
-
 bin/*
-.vs/* 
-
-
+.vs/
+*/.vs
 
 # Ignore temporary files
 
 *.o
-
 *.a
-
 *.so
-
 *.dll
-
-
-
 
 # Ignore platform-specific configuration files (adapt as needed)
 
 *.vcxproj
 *.vsidx
-
 *.sln
-
 *.xcodeproj
