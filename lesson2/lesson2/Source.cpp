@@ -2,12 +2,12 @@
 
 void RenderScene(void) {
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor3f(1.0, 0.0, 0.0);	//red
+	glColor3f(109.0 / 255.0, 152.0 / 255.0, 134.0 / 255.0);	//rectangle
 	glRectf(-0.5, 0.5, 0.5, -0.5);	//rectangle
 	glFlush();
 }
 void SetupRC(void) {
-	glClearColor(0.0, 0.0, 1.0, 1.0);	//blue
+	glClearColor(33.0 / 255.0, 33.0/255.0, 33.0/255.0, 0);	//bg
 }
 void ChangeSize(GLsizei w, GLsizei h) {
 	if (h == 0) { h = 1; }
