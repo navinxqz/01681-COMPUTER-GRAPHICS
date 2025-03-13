@@ -2,8 +2,6 @@
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
-
-    //filled rectangle White inside
     glColor3f(1.0f, 1.0f, 1.0f); // White color
     glBegin(GL_QUADS);
     glVertex2f(-0.5f, 0.5f);
