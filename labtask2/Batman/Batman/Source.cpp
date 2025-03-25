@@ -1,13 +1,10 @@
 #include <GL/glut.h>
-void batman_logo_1() {
-
+void batman() {
 	glColor3f(0.0f, 0.0f, 0.0f);
-	glBegin(GL_POLYGON); // Each set of 4 vertices form a quad
-
-
+	glBegin(GL_POLYGON);
 	glVertex2f(-1.5, 4.8);
-	glVertex2f(-6.2, 4.8);
 
+	glVertex2f(-6.2, 4.8);
 	glVertex2f(-5.6, 4.545);
 	glVertex2f(-5.203, 4.334);
 	glVertex2f(-4.865, 4.08);
@@ -39,35 +36,32 @@ void batman_logo_1() {
 	glVertex2f(4.29, 2.22);
 	glVertex2f(4.5455, 2.1815);
 
-	glVertex2f(4.4, 3.6);
-	glVertex2f(4.6, 4);
-	glVertex2f(4.8, 4.2);
-	glVertex2f(5.2, 4.4);
-	glVertex2f(5.6, 4.6);
-	glVertex2f(6.2, 4.8);
-	glVertex2f(1.5, 4.8);
-
+	glVertex2f(4.4626, 2.5395);
+	glVertex2f(4.472, 2.815);
+	glVertex2f(4.53, 3.15);
+	glVertex2f(4.713, 3.494);
+	glVertex2f(5, 3.8);
+	glVertex2f(5.4488, 4.1706);
+	glVertex2f(5.912, 4.427);
+	glVertex2f(6.4089, 4.6315);
 
 	glEnd();
-
 }
-
-void logo_extension() {
-
-
+void extra() {
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_POLYGON);
 
 	glVertex2f(0, 4.8);
 	glVertex2f(0, 3.9);
-	glVertex2f(-0.4, 3.8);
-	glVertex2f(-0.6, 4.6);
+	glVertex2f(-0.411, 3.762);
+	glVertex2f(-0.21, 4.546);
 	glVertex2f(-0.78, 3.8);
-	glVertex2f(-1, 3.5);
-	glVertex2f(-1.25, 3.6);
-	glVertex2f(-1.4, 3.8);
-	glVertex2f(-1.5, 4.2);
-	glVertex2f(-1.5, 4.8);
+
+	glVertex2f(-0.97, 3.81);
+	glVertex2f(-1.204, 3.879);
+	glVertex2f(-1.498, 3.972);
+	glVertex2f(-1.8, 4.275);
+	glVertex2f(-1.9414, 4.8);
 
 	glEnd();
 
@@ -89,39 +83,21 @@ void logo_extension() {
 	glEnd();
 }
 
-
-
 void display() {
-
-	glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to black and opaque
-
-	glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
-
+	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
 	glLineWidth(2.5);
-
-	batman_logo_1();
-	logo_extension();
-
-	glFlush(); // Render now
-
+	batman();
+	extra();
+	glFlush();
 }
-
-/* Main function: GLUT runs as a console application starting at main() */
-
 int main(int argc, char** argv) {
-
-	glutInit(&argc, argv); // Initialize GLUT
-	glutInitWindowSize(820, 420); // Set the window's initial width & height
-
-	glutCreateWindow("OpenGL Setup Test"); // Create a window with the given title
-
-
+	glutInit(&argc, argv);
+	glutInitWindowSize(820, 420);
+	glutCreateWindow("I am Batman");
 	gluOrtho2D(-7, +6.5, -1.5, +5.5);
 
-	glutDisplayFunc(display); // Register display callback handler for window re-paint
-
-	glutMainLoop(); // Enter the event-processing loop
-
+	glutDisplayFunc(display);
+	glutMainLoop();
 	return 0;
-
 }
