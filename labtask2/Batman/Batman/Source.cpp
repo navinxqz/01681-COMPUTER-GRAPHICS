@@ -44,10 +44,11 @@ static void whitespace() {
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_POLYGON);
 	glVertex2f(0.0066, 4.8);
-
+	
 	glVertex2f(0, 4.2);
-	//glVertex2f(-0.2333, 4.1537);
+	
 	glVertex2f(-0.3135, 4.586);
+	glVertex2f(-0.2333, 4.1537);
 	glVertex2f(-0.46, 3.75);
 	glVertex2f(-0.78, 3.8);
 	glVertex2f(-1.204, 3.879);
