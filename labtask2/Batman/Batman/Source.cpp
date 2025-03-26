@@ -2,7 +2,7 @@
 void batman() {
 	glColor3f(0.0f, 0.0f, 0.0f);
 	glBegin(GL_POLYGON);
-	glVertex2f(-1.5, 4.8);
+	glVertex2f(3, 4.8);
 
 	glVertex2f(-6.2, 4.8);
 	glVertex2f(-5.6, 4.545);
@@ -40,16 +40,16 @@ void batman() {
 
 	glEnd();
 }
-void extra() {
+static void whitespace() {
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_POLYGON);
 	glVertex2f(0.0066, 4.8);
 
-	glVertex2f(0, 3.9);
-	glVertex2f(-0.2333, 4.1537);
+	glVertex2f(0, 4.2);
+	//glVertex2f(-0.2333, 4.1537);
 	glVertex2f(-0.3135, 4.586);
+	glVertex2f(-0.46, 3.75);
 	glVertex2f(-0.78, 3.8);
-	glVertex2f(-0.56, 3.8);
 	glVertex2f(-1.204, 3.879);
 	glVertex2f(-1.498, 3.972);
 	glVertex2f(-1.8, 4.275);
@@ -61,9 +61,9 @@ void extra() {
 	glBegin(GL_POLYGON);
 	glVertex2f(0.0066, 4.8);
 
-	glVertex2f(0, 3.9);
-	glVertex2f(0.467, 3.8);
+	glVertex2f(0, 4.2);
 	glVertex2f(0.349, 4.595);
+	glVertex2f(0.467, 3.8965);
 	glVertex2f(0.709, 3.789);
 	glVertex2f(1.0243, 3.83);
 	glVertex2f(1.2825, 3.87);
@@ -79,7 +79,7 @@ void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glLineWidth(2.5);
 	batman();
-	extra();
+	whitespace();
 	glFlush();
 }
 int main(int argc, char** argv) {
