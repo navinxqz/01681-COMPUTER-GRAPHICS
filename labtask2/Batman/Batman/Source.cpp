@@ -69,7 +69,7 @@ void extra() {
 	glVertex2f(1.2825, 3.87);
 	glVertex2f(1.5828, 3.96);
 	glVertex2f(1.822, 4.2048);
-	glVertex2f(2.0745, 4.7699);
+	glVertex2f(2.0745, 4.8);
 
 	glEnd();
 }
