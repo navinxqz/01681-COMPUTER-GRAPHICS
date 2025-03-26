@@ -43,13 +43,13 @@ void batman() {
 void extra() {
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_POLYGON);
+	glVertex2f(0.0066, 4.8);
 
-	glVertex2f(0, 4.8);
 	glVertex2f(0, 3.9);
-	glVertex2f(-0.4, 3.8);
-	glVertex2f(-0.6, 4.6);
+	glVertex2f(-0.2333, 4.1537);
+	glVertex2f(-0.3135, 4.586);
 	glVertex2f(-0.78, 3.8);
-	glVertex2f(-0.97, 3.81);
+	glVertex2f(-0.56, 3.8);
 	glVertex2f(-1.204, 3.879);
 	glVertex2f(-1.498, 3.972);
 	glVertex2f(-1.8, 4.275);
@@ -59,17 +59,17 @@ void extra() {
 
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_POLYGON);
+	glVertex2f(0.0066, 4.8);
 
-	glVertex2f(0, 4.8);
 	glVertex2f(0, 3.9);
-	glVertex2f(0.4, 3.8);
-	glVertex2f(0.6, 4.6);
-	glVertex2f(0.78, 3.8);
-	glVertex2f(1, 3.5);
-	glVertex2f(1.25, 3.6);
-	glVertex2f(1.4, 3.8);
-	glVertex2f(1.5, 4.2);
-	glVertex2f(1.5, 4.8);
+	glVertex2f(0.467, 3.8);
+	glVertex2f(0.349, 4.595);
+	glVertex2f(0.709, 3.789);
+	glVertex2f(1.0243, 3.83);
+	glVertex2f(1.2825, 3.87);
+	glVertex2f(1.5828, 3.96);
+	glVertex2f(1.822, 4.2048);
+	glVertex2f(2.0745, 4.7699);
 
 	glEnd();
 }
