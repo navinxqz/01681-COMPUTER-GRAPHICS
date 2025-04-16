@@ -1,9 +1,8 @@
 #include <GL/glut.h>
-#include <cmath>
+#include <math.h>
 
-// Function to draw the base of the lamp post
-void drawBase() {
-    glColor3f(0.0, 0.0, 0.0); // Black
+void Base() {
+    glColor3f(0.0, 0.0, 0.0);
     glBegin(GL_POLYGON);
     glVertex2f(-0.2f, -1.0f);
     glVertex2f(0.2f, -1.0f);
@@ -12,9 +11,8 @@ void drawBase() {
     glEnd();
 }
 
-// Function to draw the pole
-void drawPole() {
-    glColor3f(0.0, 0.0, 0.0); // Black
+void Pole() {
+    glColor3f(0.0, 0.0, 0.0);
     glBegin(GL_POLYGON);
     glVertex2f(-0.05f, -0.9f);
     glVertex2f(0.05f, -0.9f);
@@ -23,19 +21,17 @@ void drawPole() {
     glEnd();
 }
 
-// Function to draw the stylized roof
-void drawRoof() {
-    glColor3f(0.5f, 0.0f, 0.0f); // Dark Red
+void Roof() {
+    glColor3f(0.5f, 0.0f, 0.0f);
     glBegin(GL_TRIANGLES);
-    glVertex2f(-0.25f, 0.7f);   // Left corner
-    glVertex2f(0.25f, 0.7f);   // Right corner
-    glVertex2f(0.0f, 0.9f);   // Top peak
+    glVertex2f(-0.25f, 0.7f);
+    glVertex2f(0.25f, 0.7f); 
+    glVertex2f(0.0f, 0.9f);  
     glEnd();
 }
 
-// Function to draw the lamp box
-void drawLampBox() {
-    glColor3f(0.0, 0.0, 0.0); // Black
+void LampBox() {
+    glColor3f(0.0, 0.0, 0.0); 
     glBegin(GL_POLYGON);
     glVertex2f(-0.15f, 0.5f);
     glVertex2f(0.15f, 0.5f);
@@ -44,9 +40,8 @@ void drawLampBox() {
     glEnd();
 }
 
-// Function to draw the circular bulb
-void drawBulb() {
-    glColor3f(1.0f, 1.0f, 0.0f); // Yellow
+void Bulb() {
+    glColor3f(1.0f, 1.0f, 0.0f); 
     float cx = 0.0f, cy = 0.6f, radius = 0.04f;
     int segments = 100;
     glBegin(GL_TRIANGLE_FAN);
@@ -58,25 +53,25 @@ void drawBulb() {
     glEnd();
 }
 
-// Display function that calls all parts
 void display() {
-    glClearColor(1.0, 1.0, 1.0, 1.0); // White background
+    glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    drawBase();
-    drawPole();
-    drawLampBox();
-    drawRoof();
-    drawBulb();
-
+    Base();
+    Pole();
+    LampBox();
+    Roof();
+    Bulb();
     glFlush();
 }
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
-    glutCreateWindow("Stylized Lamp Post");
-    glutInitWindowSize(600, 600);
-    glutInitWindowPosition(100, 100);
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+    glutInitWindowSize(500, 500);
+    glutInitWindowPosition(300, 200);
+    glutCreateWindow("Lamp Post");
+    
     glutDisplayFunc(display);
     glutMainLoop();
     return 0;
