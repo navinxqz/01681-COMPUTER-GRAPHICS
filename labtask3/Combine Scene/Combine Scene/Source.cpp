@@ -13,6 +13,24 @@ void drawCircle(float cx, float cy, float radius, int segments) {
     }
     glEnd();
 }
+void Circle(float cx, float cy, float radius, int segments = 36) {
+    glBegin(GL_POLYGON);
+    for (int i = 0; i < segments; i++) {
+        float angle = 2.0f * 3.1415926f * i / segments;
+        glVertex2f(cx + radius * cos(angle), cy + radius * sin(angle));
+    }
+    glEnd();
+}
+
+void drawRectangle(float x1, float y1, float x2, float y2) {
+    glBegin(GL_POLYGON);
+    glVertex2f(x1, y1);
+    glVertex2f(x1, y2);
+    glVertex2f(x2, y2);
+    glVertex2f(x2, y1);
+    glEnd();
+}
+
 
 void drawBuilding(float offsetX) {
     float bx1 = 250 + offsetX, by1 = 100;
@@ -133,25 +151,13 @@ void drawBuilding(float offsetX) {
 }
 
 void drawTree(float x, float y) {
-    float trunkWidth = 50;
-    float trunkHeight = 140;
-    glColor3f(0.55f, 0.27f, 0.07f);
-    glBegin(GL_POLYGON);
-    glVertex2f(x, y);
-    glVertex2f(x + trunkWidth, y);
-    glVertex2f(x + trunkWidth, y + trunkHeight);
-    glVertex2f(x, y + trunkHeight);
-    glEnd();
+    glColor3f(0.4f, 0.2f, 0.0f);
+    drawRectangle(x - 10, y, x + 10, y + 100);
 
-    float centerX = x + trunkWidth / 2;
-    float centerY = y + trunkHeight;
-
-    glColor3f(0.0f, 0.6f, 0.2f);
-    drawCircle(centerX, centerY + 80, 70, 50);
-    drawCircle(centerX - 50, centerY + 50, 60, 50);
-    drawCircle(centerX + 50, centerY + 50, 60, 50);
-    drawCircle(centerX - 30, centerY + 10, 55, 50);
-    drawCircle(centerX + 30, centerY + 10, 55, 50);
+    glColor3f(0.0f, 0.8f, 0.0f);
+    Circle(x, y + 110, 30);
+    Circle(x, y + 150, 25);
+    Circle(x, y + 180, 20);
 }
 
 void drawLampPost(float x, float y) {
