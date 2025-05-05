@@ -17,13 +17,13 @@ void display() {
     glPushMatrix();
 
     glTranslatef(-offset, 0.0f, 0.0f);  // Move left box to the left
-    glColor3f(1.0f, 0.0f, 0.0f);
+    glColor3f(0.96f, 0.933f, 0.867f);
     drawBox(0, 1, -1, 1, -1, 0, 0, 0);
     glPopMatrix();
     glPushMatrix();
 
     glTranslatef(offset, 0.0f, 0.0f);   // Move right box to the right
-    glColor3f(0.0f, 0.0f, 1.0f);
+    glColor3f(0.48f, 0.89f, 0.81f);
     drawBox(0, 1, 1, 1, 1, 0, 0, 0);
     glPopMatrix();
 
@@ -38,7 +38,7 @@ void timer(int value) {
     glutTimerFunc(1, timer, 0);
 }
 void init() {
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glColor3f(0.0f, 0.1f, 0.2f);
     gluOrtho2D(-3, 3, -3, 3);
 }
 int main(int argc, char** argv) {
