@@ -51,15 +51,13 @@ void display() {
 
 void timer(int value) {
     bladeRotation += 2.0f;
-    if (bladeRotation > 360.0f)
+    if (bladeRotation > 360.0f) {
         bladeRotation -= 360.0f;
-
+    }
     glutPostRedisplay();
     glutTimerFunc(2, timer, 0);
 }
-void init() {
-    glClearColor(0.8f, 0.9f, 1.0f, 1.0f);
-}
+void init() { glClearColor(0.8f, 0.9f, 1.0f, 1.0f); }
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
