@@ -6,7 +6,7 @@ void drawCircle(float cx, float cy, float r, int segments) {
     glBegin(GL_TRIANGLE_FAN);
     glVertex2f(cx, cy);
 
-    for (int i = 0; i <= segments; ++i) {
+    for (int i = 0; i <= segments; i++) {
         float angle = 2.0f * 3.1416 * i / segments;
         float x = cx + r * cos(angle);
         float y = cy + r * sin(angle);
