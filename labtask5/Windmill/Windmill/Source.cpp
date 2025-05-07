@@ -11,7 +11,8 @@ void drawCircle(float cx, float cy, float r, int segments) {
         float x = cx + r * cos(angle);
         float y = cy + r * sin(angle);
         glVertex2f(x, y);
-    }glEnd();
+    }
+    glEnd();
 }
 
 void drawRectangle(float x, float y, float x2, float y2) {
@@ -22,7 +23,7 @@ void drawRectangle(float x, float y, float x2, float y2) {
     glVertex2f(x, y2);
     glEnd();
 }
-void drawBlades() {
+void Blades() {
     glPushMatrix();
     glRotatef(bladeRotation, 0.0f, 0.0f, 1.0f);
     glColor3f(0.4f, 0.4f, 0.4f);
@@ -43,7 +44,7 @@ void display() {
 
     glPushMatrix();
     glTranslatef(0.0f, 1.0f, 0.0f);
-    drawBlades();
+    Blades();
     glPopMatrix();
     glutSwapBuffers();
 }
