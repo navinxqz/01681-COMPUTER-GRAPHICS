@@ -17,7 +17,6 @@ void drawCircle(float x, float y, float r) {
     glEnd();
 }
 
-// Helper: Draw a rectangle from bottom-left to top-right
 void drawRectangle(float x1, float y1, float x2, float y2) {
     glBegin(GL_QUADS);
     glVertex2f(x1, y1);
@@ -26,8 +25,6 @@ void drawRectangle(float x1, float y1, float x2, float y2) {
     glVertex2f(x1, y2);
     glEnd();
 }
-
-// Helper: Draw a triangle
 void drawTriangle() {
     glBegin(GL_TRIANGLES);
     glVertex2f(0.0f, 0.5f);
@@ -35,8 +32,6 @@ void drawTriangle() {
     glVertex2f(0.5f, -0.5f);
     glEnd();
 }
-
-// Helper: Draw a star shape
 void drawStar() {
     glBegin(GL_LINE_LOOP);
     for (int i = 0; i < 10; ++i) {
@@ -48,54 +43,41 @@ void drawStar() {
     }
     glEnd();
 }
-
-// Display callback
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
     glLoadIdentity();
 
-    glColor3f(1.0f, 1.0f, 1.0f); // White color for all objects
-
-    // Center the object on screen
+    glColor3f(1.0f, 1.0f, 1.0f);
     glPushMatrix();
     glTranslatef(0.0f, 0.0f, 0.0f);
 
-    // Draw only the current object
     switch (currentObject) {
     case 0:
-        drawCircle(0.0f, 0.0f, 0.4f); // Circle
+        drawCircle(0.0f, 0.0f, 0.4f);
         break;
     case 1:
-        drawRectangle(-0.4f, -0.4f, 0.4f, 0.4f); // Square
+        drawRectangle(-0.4f, -0.4f, 0.4f, 0.4f);
         break;
     case 2:
-        drawTriangle(); // Triangle
+        drawTriangle();
         break;
     case 3:
-        drawStar(); // Star
+        drawStar();
         break;
     }
-
     glPopMatrix();
-
     glutSwapBuffers();
 }
-
-// Timer callback
 void timer(int value) {
     currentObject = (currentObject + 1) % numObjects;
-
     glutPostRedisplay();
     glutTimerFunc(delay, timer, 0);
 }
 
-// Initialize viewport
 void init() {
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Black background
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
 }
-
-// Main function
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
@@ -104,8 +86,7 @@ int main(int argc, char** argv) {
 
     init();
     glutDisplayFunc(display);
-    glutTimerFunc(delay, timer, 0); // Start the animation
+    glutTimerFunc(delay, timer, 0);
     glutMainLoop();
-
     return 0;
 }
