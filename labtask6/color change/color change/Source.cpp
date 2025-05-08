@@ -1,11 +1,11 @@
 #include <GL/glut.h>
 
 GLfloat colors[][3] = {
-    {1.0f, 0.0f, 0.0f},  
-    {0.0f, 1.0f, 0.0f},  
-    {0.0f, 0.0f, 1.0f},  
-    {1.0f, 1.0f, 0.0f},  
-    {1.0f, 0.0f, 1.0f}
+    {0.95f, 0.95f, 0.88f},  
+    {0.15f, 0.33f, 0.54f},  
+    {0.09f, 0.23f, 0.3f},  
+    {0.87f, 0.69f, 0.33f},  
+    {0.44f, 0.73f, 0.7f}
 };
 int currentColor = 0;
 int numColors = 5;
@@ -24,7 +24,7 @@ void timer(int value) {
     glutPostRedisplay();
     glutTimerFunc(20, timer, 0);
 }
-void init() {
+void init(){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(0.0, 1.0, 0.0, 1.0);
