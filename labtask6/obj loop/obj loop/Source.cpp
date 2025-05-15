@@ -84,10 +84,10 @@ void display() {
 }
 void timer(int value) {
     glutPostRedisplay();
-    glutTimerFunc(16, timer, 0); //60 FPS
+    glutTimerFunc(16, timer, 0);
 }
 void init() {
-    glClearColor(0.1f, 0.1f, 0.1f, 1.0f); // Dark background
+    glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
     gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
 }
 int main(int argc, char** argv) {
